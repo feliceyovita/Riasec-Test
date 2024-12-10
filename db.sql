@@ -1,11 +1,10 @@
-CREATE DATABASE riasec_test ;
 USE riasec_test;
 
 CREATE TABLE statements(
- statement_id integer(3),
- statement_content varchar(255) not null,
- statement_category char(1),
- PRIMARY KEY (statement_category,statement_id)
+	statement_id integer(3),
+	statement_content varchar(255) not null,
+	statement_category char(1),
+	PRIMARY KEY (statement_category,statement_id)
 );
 
 CREATE TABLE personality_test_scores(
@@ -68,23 +67,32 @@ INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUE
 Help people with family-related problems",'S'); 
 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Sell restaurant franchises to individuals",'E'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (1, "Menjual waralaba restoran ke orang yang tertarik", 'E');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Sell merchandise at a department store",'E'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (2, "Menjual produk di toko untuk pelanggan", 'E');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Manage the operations of a hotel",'E'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (3, "Mengelola semua kegiatan di hotel", 'E');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Operate a beauty salon or barber shop",'E'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (4, "Menjalankan salon atau tempat potong rambut", 'E');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Manage a department within a large company",'E'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (5, "Mengatur dan memimpin bagian dalam perusahaan besar", 'E');
 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (1, "Membuat dan membagikan cek gaji untuk karyawan", 'C');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Generate the monthly payroll checks for an office",'C'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (2, "Memeriksa dan menghitung stok barang menggunakan komputer genggam", 'C');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Inventory supplies using a hand-held computer",'C'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (3, "Menggunakan program komputer untuk membuat tagihan pelanggan", 'C');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Use a computer program to generate customer bills",'C'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (4, "Menyimpan dan mengatur data karyawan dengan rapi", 'C');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Maintain employee records",'C'); 
-
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Compute and record statistical and other numerical data",'C'); 
+INSERT INTO statements(statement_id, statement_content, statement_category) 
+VALUES (5, "Menghitung dan mencatat data angka atau statistik dengan akurat", 'C');
