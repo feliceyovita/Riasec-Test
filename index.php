@@ -1,14 +1,26 @@
-<?php include 'includes/header.php' ?>
-  <div class="main">
-  	<h1 class="header">Welcome to RIASEC test</h1>
-  	<div class="intro-details">
-  	<p><b><u>Introduction</u>:</b> The Holland Occupational Themes is a theory of personality that focuses on career and vocational choice. It groups people on the basis of their suitability for six different categories of occupations. The six types yield the RIASEC acronym, by which the theory is also commonly known. The theory was developed by John L. Holland over the course of his career, starting in the 1950s. The typology has come to dominate the field of career counseling and has been incorporated into most of the popular assessments used in the field. The RIASEC Markers Scales from the Interest Item Pool were developed by Liao, Armstrong and Rounds (2008) for use in psychological research as a public domain alternative to the usual assessments which are marketed commercially.</p>
-  	<p><b><u>Procedure</u>:</b>The test consists of 30 tasks that you will have to rate by how much you would enjoy performing each on a scale of (1) dislike (2) slightly dislike (3) neither like not dislike (4) slightly enjoy (5) enjoy. The test will take most five to ten minutes to complete.</p>
-  	<p><b><u>Participation</u>:</b> Your use of this assessment should be for educational purposes (learning about Holland's theory). It should not be used as psychological advice and is not a replacement for a counsellor. Additionally, your answers may be anonymously stored and used for research.</p>
-  	<div class="test-section">
-  		<h3>Want to take the test ?</h3>
-  		<a href="test_form.php" class="test-btn">Start</a>
-  	</div>
-  	</div>
+<?php include 'includes/header.php'; ?>
+<section class="section">
+  <div class="section__container">
+    <div class="content">
+      <p class="subtitle">HELLO</p>
+      <h1 class="title">
+        Welcome to <span>Riasec Test</span> Website
+      </h1>
+      <p class="description">
+        Holland Occupational Themes adalah teori kepribadian yang berfokus pada pilihan karier dan pekerjaan, mengelompokkan
+        orang berdasarkan kecocokan dengan enam kategori pekerjaan yang membentuk akronim RIASEC. Dikembangkan oleh John L.
+        Holland sejak 1950-an, teori ini mendominasi bidang konseling karier dan digunakan dalam banyak penilaian populer. Skala
+        Penanda RIASEC oleh Liao, Armstrong, dan Rounds (2008) dibuat sebagai alternatif publik untuk penilaian komersial. <br><br>
+        Tes ini terdiri dari 30 tugas yang harus Anda nilai berdasarkan seberapa Anda menikmati melakukannya, dengan skala: (1)
+        tidak suka, (2) agak tidak suka, (3) netral, (4) agak suka, (5) suka. Tes ini membutuhkan waktu sekitar 5-10 menit.
+      </p>
+	<div class="action__btns">
+		<a href="test_form.php" class="mulai__test">Mulai tes</a>
+	</div>
+    </div>
+    <div class="image">
+      <img src="assets/profile.png" alt="profile" />
+    </div>
   </div>
- <?php include 'includes/footer.php' ?>
+</section>
+<?php include 'includes/footer.php'; ?>
