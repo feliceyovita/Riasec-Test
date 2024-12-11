@@ -19,27 +19,27 @@ CREATE TABLE personality_test_scores(
 );
 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Conduct a musical choir",'A'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Mengadakan paduan suara musikal",'A'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Design artwork for magazines",'A'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Merancang karya seni untuk majalah",'A'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Perform stunts for a movie or television show",'A'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Melakukan aksi laga untuk film atau acara televisi",'A'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Play a musical instrument",'A');
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Memainkan alat musik",'A');
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Direct a play",'A'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Menyutradarai sebuah drama panggung",'A');  
 
 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Study the structure of the human body",'I'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Mempelajari struktur tubuh manusia",'I'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Develop a new medical treatment or procedure",'I'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Mengembangkan perawatan atau prosedur medis baru",'I'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Make a map of the bottom of an ocean",'I'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Membuat peta dasar laut",'I'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Do research on plants or animals",'I'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Melakukan penelitian tentang tumbuhan atau hewan",'I'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Work in a biology lab",'I'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Bekerja di laboratorium biologi",'I'); 
 
 
 
