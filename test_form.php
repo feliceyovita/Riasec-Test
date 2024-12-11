@@ -51,7 +51,9 @@
                 </table>
 
                 <br><br>
-                <div>Apakah Anda ingin kami menggunakan data ini untuk keperluan penelitian? &nbsp;
+                <!-- Placeholder for the question about saving data, hidden initially -->
+                <div id="researchQuestion" style="display: none;">
+                    Apakah Anda ingin kami menggunakan data ini untuk keperluan penelitian? &nbsp;
                     Ya<input type="radio" name="can_save_data" value="true"> 
                 </div>
 
@@ -78,13 +80,21 @@
     document.getElementById('nextButton').addEventListener('click', function() {
         document.getElementById('row' + currentQuestion).style.display = 'none';
         currentQuestion++;
+        
+        // Display the next question
         if (currentQuestion < totalQuestions) {
             document.getElementById('row' + currentQuestion).style.display = 'table-row';
         } else {
+            // Show the research question on the last question
+            document.getElementById('researchQuestion').style.display = 'block';
+
+            // Show the "Submit" button and hide the "Next" button
             document.querySelector('input[type="submit"]').style.display = 'inline-block';
             document.getElementById('nextButton').style.display = 'none'; 
             closeModal(); 
         }
+        
+        // Show the "Previous" button if needed
         if (currentQuestion > 0) {
             document.getElementById('prevButton').style.display = 'inline-block';
         }
@@ -93,9 +103,18 @@
     document.getElementById('prevButton').addEventListener('click', function() {
         document.getElementById('row' + currentQuestion).style.display = 'none';
         currentQuestion--;
+        
+        // Display the previous question
         if (currentQuestion >= 0) {
             document.getElementById('row' + currentQuestion).style.display = 'table-row';
         }
+
+        // Hide the research question if we're not on the last question
+        if (currentQuestion < totalQuestions - 1) {
+            document.getElementById('researchQuestion').style.display = 'none';
+        }
+
+        // Adjust button visibility
         if (currentQuestion < totalQuestions - 1) {
             document.getElementById('nextButton').style.display = 'inline-block';
         }
