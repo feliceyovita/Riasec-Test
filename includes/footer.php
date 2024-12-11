@@ -3,6 +3,7 @@
 
 window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer", {
+		backgroundColor: "#faf5ff",  
 		title:{
 			text: "Hasil dari Riasec-Test dalam Diagram "              
 		},
