@@ -14,7 +14,7 @@
     <form action="result.php" method="post" id="testForm">
         <div id="questionModal" class="modal">
             <div class="modal-content">
-                <table class="table">
+                <table class="table" id="questionTable">
                     <thead>
                         <tr>
                             <th>Pernyataan</th>
@@ -25,7 +25,7 @@
                             <th>Suka</th>
                         </tr>
                     </thead>
-                    <tbody id="questionTable">
+                    <tbody>
                         <?php 
                         $query = "SELECT * FROM statements ORDER BY RAND()";
                         $statement_select_query = mysqli_query($connection, $query);
@@ -50,11 +50,13 @@
                     </tbody>
                 </table>
 
-                <div class="data-consent">
+                <br>
+
+                <div id="researchQuestion" style="display: none;">
                     Apakah Anda ingin kami menggunakan data ini untuk keperluan penelitian? &nbsp;
                     Ya <input type="radio" name="can_save_data" value="true"> 
                 </div>
-
+                <br>
 
                 <button type="button" id="prevButton" class="form_submit test-btn" style="display: none;">Previous</button>
 
@@ -72,24 +74,25 @@
 
     document.getElementById('questionModal').style.display = 'flex';
 
-    function closeModal() {
-        document.getElementById('questionModal').style.display = 'none';
-    }
-
     document.getElementById('nextButton').addEventListener('click', function() {
-    document.getElementById('row' + currentQuestion).style.display = 'none';
-    currentQuestion++;
-    if (currentQuestion < totalQuestions) {
-        document.getElementById('row' + currentQuestion).style.display = 'table-row';
-    } else {
-        document.querySelector('input[type="submit"]').style.display = 'inline-block';
-        document.getElementById('nextButton').style.display = 'none'; 
-    }
-    if (currentQuestion > 0) {
-        document.getElementById('prevButton').style.display = 'inline-block';
-    }
-});
+        document.getElementById('row' + currentQuestion).style.display = 'none';
+        currentQuestion++;
+        if (currentQuestion < totalQuestions) {
+            document.getElementById('row' + currentQuestion).style.display = 'table-row';
+        } else {
+            document.getElementById('questionTable').style.display = 'none';
+            document.querySelector('input[type="submit"]').style.display = 'inline-block';
+            document.getElementById('researchQuestion').style.display = 'block';
+            document.getElementById('nextButton').style.display = 'none'; 
+        }
+        if (currentQuestion > 0) {
+            document.getElementById('prevButton').style.display = 'inline-block';
+        }
 
+        if (currentQuestion === totalQuestions) {
+            document.getElementById('prevButton').style.display = 'none';
+        }
+    });
 
     document.getElementById('prevButton').addEventListener('click', function() {
         document.getElementById('row' + currentQuestion).style.display = 'none';
@@ -107,3 +110,4 @@
 </script>
 
 <?php include 'includes/footer.php'; ?>
+    
