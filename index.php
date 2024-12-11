@@ -4,7 +4,7 @@
     <div class="content">
       <p class="subtitle">HELLO</p>
       <h1 class="title">
-        Welcome to <span>Riasec Test</span> Website
+        Selamat Datang di Website <span>Riasec Test</span>
       </h1>
       <p class="description">
         Holland Occupational Themes adalah teori kepribadian yang berfokus pada pilihan karier dan pekerjaan, mengelompokkan

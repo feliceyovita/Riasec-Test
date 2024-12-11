@@ -1,24 +1,50 @@
-<?php include 'includes/header.php' ?>
-<?php include 'util_functions.php' ?>
+<?php include 'includes/header.php'; ?>
+<?php include 'util_functions.php'; ?>
 <div>
-<?php 
-	getPersonalityTestResults();
-?>
- <div class="main result">
- 	<p>According to the tests results, you got <b><?php echo $result_personality ?></b> personality</p>
- 	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
- 	<div class="note">
-		<p> here <b>R </b> means Realistic</p>
-		<p><b>I</b> means Investigative</p>
-		<p><b>A</b> means Artistic</p>
-		<p><b>S</b> means Social</p>
-		<p><b>E</b> means Enterprising</p>
-		<p><b>C</b> means Conventional</p>
-	 </div>
-	 
-	 <p>Want to take test again ? <a href="test_form.php">Click here</a></p>
- 	
- </div>
-</div>
+    <?php getPersonalityTestResults(); ?>
+    <div class="main result">
+        <p>Berdasarkan tes, kamu mendapatkan hasil kepribadian <b><?php echo $result_personality ?></b></p>
+        <div id="chartContainer" style="height: 300px; width: 95%; margin-top: 20px; margin-bottom: 50px;"></div>
 
- <?php include 'includes/footer.php' ?>
+		<div class="categories">
+			<div class="category" onclick="showDescription('Realistic')">
+				<img src="assets/realistic.png" alt="Realistic">
+			</div>
+			<div class="category" onclick="showDescription('Investigative')">
+				<img src="assets/investigate.png" alt="Investigative">
+			</div>
+			<div class="category" onclick="showDescription('Artistic')">
+				<img src="assets/artistic.png" alt="Artistic">
+			</div>
+			<div class="category" onclick="showDescription('Social')">
+				<img src="assets/social.png" alt="Social">
+			</div>
+			<div class="category" onclick="showDescription('Enterprising')">
+				<img src="assets/enterprising.png" alt="Enterprising">
+			</div>
+			<div class="category" onclick="showDescription('Conventional')">
+				<img src="assets/conventional.png" alt="Conventional">
+			</div>
+		</div>
+
+		<div class="category-box">
+			<!-- Baris 1: Kolom-kolom kategori -->
+			<div class="category-row">
+				<div class="category-cell" onclick="selectCategory('Realistic')">Realistic</div>
+				<div class="category-cell" onclick="selectCategory('Investigative')">Investigative</div>
+				<div class="category-cell" onclick="selectCategory('Artistic')">Artistic</div>
+				<div class="category-cell" onclick="selectCategory('Social')">Social</div>
+				<div class="category-cell" onclick="selectCategory('Enterprising')">Enterprising</div>
+				<div class="category-cell" onclick="selectCategory('Conventional')">Conventional</div>
+			</div>
+			<!-- Baris 2: Deskripsi -->
+			<div class="category-description">
+				<p id="description-text">Pilih salah satu kategori untuk melihat deskripsi.</p>
+			</div>
+		</div>
+
+        <p>Want to take test again? <a href="test_form.php">Click here</a></p>
+    </div>
+</div>
+<?php include 'includes/footer.php'; ?>
+<script src="result.js"></script>
