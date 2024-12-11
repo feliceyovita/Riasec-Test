@@ -1,191 +1,289 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-.main {
-	background-color: var(--extra-light);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	padding: 20px;
 
-}
 :root {
-	--primary-color: #a855f7;
-	--primary-color-dark: #9333ea;
-	--secondary-color: #ca8a04;
-	--text-dark: #1f2937;
-	--text-light: #585d68;
-	--extra-light: #faf5ff;
-	--max-width: 1200px;
+    --primary-color: #a855f7;
+    --primary-color-dark: #9333ea;
+    --secondary-color: #ca8a04;
+    --text-dark: #1f2937;
+    --text-light: #585d68;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
 }
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 body {
-	font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--extra-light); /* Apply background color to body */
+}
+
+.main {
+    background-color: var(--extra-light); /* Apply background color to main section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
 .section {
-	background-color: var(--extra-light);
+    background-color: var(--extra-light); /* Apply background color to sections */
 }
 
 .section__container {
-	min-height: 100vh;
-	max-width: var(--max-width);
-	margin: auto;
-	padding: 1rem;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: 0rem;
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0rem;
+    background-color: var(--extra-light); /* Apply background color */
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .subtitle {
-	letter-spacing: 2px;
-	color: var(--text-light);
-	font-weight: 600;
-	margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .title {
-	font-size: 2.5rem;
-	font-weight: 400;
-	line-height: 3rem;
-	color: var(--text-dark);
-	margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
 }
 
 .title span {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 .description {
-	line-height: 1.5rem;
-	color: var(--text-light);
-	margin-bottom: 2rem;
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
 }
 
+/* Button styles */
 .mulai__test {
-	display: inline-block;
-	padding: 12px 27px;
-	background-color: transparent;
-	color: #6f2dbd;
-	font-size: 18px;
-	font-weight: bold;
-	border: 2px solid #a37dcf;
-	border-radius: 10px;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	transition: all 0.3s ease;
+    display: inline-block;
+    padding: 12px 27px;
+    background-color: transparent;
+    color: #6f2dbd;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #a37dcf;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .mulai__test:hover {
-	background-color: #b388e4;
-	color: white;
+    background-color: #b388e4;
+    color: white;
 }
 
 .portfolio {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .portfolio:hover {
-	background-color: var(--primary-color-dark);
-	color: #ffffff;
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
 }
 
 .image {
-	display: grid;
-	place-items: center;
+    display: grid;
+    place-items: center;
 }
 
 .image img {
-	width: min(25rem, 90%);
+    width: min(25rem, 90%);
 }
 
 @media (width < 750px) {
-	.section__container {
-		padding: 10rem 1rem 5rem 1rem;
-		text-align: center;
-		grid-template-columns: repeat(1, 1fr);
-	}
+    .section__container {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-	.image {
-		grid-area: 1/1/2/2;
-	}
+    .image {
+        grid-area: 1/1/2/2;
+    }
 
-	.action__btns {
-		margin: auto;
-	}
+    .action__btns {
+        margin: auto;
+    }
 }
 
-/* test form page*/
+/* Modal (popup) styles */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1000; /* Posisi paling atas */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%; 
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Tombol Tutup Modal */
+.modal-close {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-close:hover {
+    background-color: #d32f2f;
+}
+
+/* Efek Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsif untuk modal */
+@media screen and (max-width: 550px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+/* Test form page */
 .table {
     border-collapse: collapse;
-	width: 100%;
-	font-size: 1.2em;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: var(--extra-light); /* Apply background color to table */
 }
 
-.table th, .table td {
+.table th,
+.table td {
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
+
 .table tr th {
-	background: #292C2F;
-	color: #fff;
+    background: #292C2F;
+    color: #fff;
 }
+
 .table tr td:nth-child(1) {
-	text-align: left;
+    text-align: left;
 }
-  
+
 .table tr:hover {
-	background-color:#471b21;
-	color: #ECEBBD;
+    background-color: #faf5ff;
+    color: black;
 }
 
-.form_submit {
-	margin-top: 20px;
-	display: inline-block;
-	margin-left: 75%;
-	right: 10px;
-	
-}
-.result {
-	font-size : 1.5em;
-	background: #f0e9ee;
-}
-.note {
-	font-style: italic;
-}
-.message {
-	color: red;
+/* Responsif untuk tabel */
+@media screen and (max-width: 550px) {
+    .table th,
+    .table td {
+        padding: 4px;
+    }
 }
 
-@media screen and (max-width: 550px){
-	.main{
-		justify-content: space-between;
-	}
-	.header,.test-btn {
-		font-size: 1em;
-	}
-	.form,.intro-details,.result {
-	font-size: 0.9em;
-	padding: 4px;
-	}
-	.table th, .table td {
-    padding: 4px;
-	}
+/* Gaya untuk tombol Previous dan Next */
+.test-btn {
+    display: inline-block;
+    padding: 12px 27px;
+    background-color: transparent;
+    color: #6f2dbd;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #a37dcf;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.test-btn:hover {
+    background-color: #b388e4;
+    color: white;
+}
+
+/* Tombol Previous disembunyikan pada awalnya */
+#prevButton {
+    float: left;
+}
+
+/* Tombol Next disembunyikan pada akhir pertanyaan */
+#nextButton {
+    float: right;
+}
+
+#prevButton {
+    display: none;
+}
+
+#nextButton {
+    display: inline-block;
+}
+
+/* Tombol Submit disembunyikan pada awalnya */
+input[type="submit"] {
+    display: none;
+}
+
+/* Styling untuk form submit */
+input[type="submit"] {
+    background-color: #6f2dbd;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a239e;
 }
