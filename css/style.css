@@ -138,6 +138,7 @@ body {
 .data-consent {
     margin-top: 10px;
     margin-left: 5px;
+    margin-bottom: 10px;
 }
 .data-consent input[type="radio"] {
     margin-left: 5px; 
@@ -153,6 +154,7 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 220px;
 }
 
 .modal-content {
