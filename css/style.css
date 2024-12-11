@@ -135,12 +135,12 @@ body {
     }
 }
 
-.data-consent {
+#researchQuestion {
     margin-top: 10px;
     margin-left: 5px;
     margin-bottom: 10px;
 }
-.data-consent input[type="radio"] {
+#researchQuestion input[type="radio"] {
     margin-left: 5px; 
     margin-right: 5px; 
 }
@@ -217,20 +217,28 @@ header, a {
 .table {
     border-collapse: collapse;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1em;
     background-color: var(--extra-light); 
 }
 
 .table th,
 .table td {
-    padding: 8px;
+    padding: 15px 20px; 
     text-align: center;
     border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-align: center;
 }
 
 .table tr th {
     background: #292C2F;
     color: #fff;
+    font-size: 1rem; 
+    font-weight: normal;
 }
 
 .table tr td:nth-child(1) {
