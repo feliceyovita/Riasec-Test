@@ -38,7 +38,7 @@ INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUE
 INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Make a map of the bottom of an ocean",'I'); 
 
 INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Do research on plants or animals",'I'); 
-
+	
 INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Work in a biology lab",'I'); 
 
 
