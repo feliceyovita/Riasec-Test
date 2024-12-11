@@ -43,7 +43,7 @@
 			</div>
 		</div>
 
-        <p>Want to take test again? <a href="test_form.php">Click here</a></p>
+        <p>Ingin mengambil tes lagi? <a href="test_form.php">Klik disini</a></p>
     </div>
 </div>
 <?php include 'includes/footer.php'; ?>
