@@ -50,10 +50,11 @@
                     </tbody>
                 </table>
 
-                <br><br>
-                <div>Apakah Anda ingin kami menggunakan data ini untuk keperluan penelitian? &nbsp;
-                    Ya<input type="radio" name="can_save_data" value="true"> 
+                <div class="data-consent">
+                    Apakah Anda ingin kami menggunakan data ini untuk keperluan penelitian? &nbsp;
+                    Ya <input type="radio" name="can_save_data" value="true"> 
                 </div>
+
 
                 <button type="button" id="prevButton" class="form_submit test-btn" style="display: none;">Previous</button>
 
@@ -76,19 +77,19 @@
     }
 
     document.getElementById('nextButton').addEventListener('click', function() {
-        document.getElementById('row' + currentQuestion).style.display = 'none';
-        currentQuestion++;
-        if (currentQuestion < totalQuestions) {
-            document.getElementById('row' + currentQuestion).style.display = 'table-row';
-        } else {
-            document.querySelector('input[type="submit"]').style.display = 'inline-block';
-            document.getElementById('nextButton').style.display = 'none'; 
-            closeModal(); 
-        }
-        if (currentQuestion > 0) {
-            document.getElementById('prevButton').style.display = 'inline-block';
-        }
-    });
+    document.getElementById('row' + currentQuestion).style.display = 'none';
+    currentQuestion++;
+    if (currentQuestion < totalQuestions) {
+        document.getElementById('row' + currentQuestion).style.display = 'table-row';
+    } else {
+        document.querySelector('input[type="submit"]').style.display = 'inline-block';
+        document.getElementById('nextButton').style.display = 'none'; 
+    }
+    if (currentQuestion > 0) {
+        document.getElementById('prevButton').style.display = 'inline-block';
+    }
+});
+
 
     document.getElementById('prevButton').addEventListener('click', function() {
         document.getElementById('row' + currentQuestion).style.display = 'none';
