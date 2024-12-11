@@ -3,7 +3,7 @@
 <div>
     <?php getPersonalityTestResults(); ?>
     <div class="main result">
-        <p>Berdasarkan tes, kamu mendapatkan hasil kepribadian <b><?php echo $result_personality ?></b></p>
+        <p  style = "font-size: 1.5rem;">Berdasarkan tes, kamu mendapatkan hasil kepribadian <b><?php echo $result_personality ?></b></p>
         <div id="chartContainer" style="height: 300px; width: 95%; margin-top: 20px; margin-bottom: 50px;"></div>
 
 		<div class="categories">
