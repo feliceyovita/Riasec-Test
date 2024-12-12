@@ -43,56 +43,45 @@ INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUE
 
 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Test the quality of parts before shipment",'R'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Uji kualitas bagian sebelum pengiriman",'R'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Lay brick or tile",'R'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Pasang bata atau ubin",'R'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Fix a broken faucet",'R'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Perbaiki keran yang rusak",'R'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Work on an offshore oil-drilling rig",'R'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Bekerja di rig pengeboran minyak lepas pantai",'R'); 
 
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Install flooring in houses",'R'); 
-
-
-
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Give career guidance to people",'S'); 
-
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Do volunteer work at a non-profit organization",'S'); 
-
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Help people who have problems with drugs or alcoho...",'S'); 
-
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Teach an individual an exercise routine",'S'); 
-
-INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"	
-Help people with family-related problems",'S'); 
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Pasang lantai di rumah",'R'); 
 
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (1, "Menjual waralaba restoran ke orang yang tertarik", 'E');
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (2, "Menjual produk di toko untuk pelanggan", 'E');
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Berikan bimbingan karier kepada orang-orang",'S'); 
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (3, "Mengelola semua kegiatan di hotel", 'E');
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(2,"Melakukan kerja sukarela di organisasi nirlaba",'S'); 
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (4, "Menjalankan salon atau tempat potong rambut", 'E');
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(3,"Membantu orang yang memiliki masalah dengan obat-obatan atau alkohol",'S'); 
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (5, "Mengatur dan memimpin bagian dalam perusahaan besar", 'E');
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(4,"Mengajarkan seseorang rutinitas olahraga",'S'); 
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (1, "Membuat dan membagikan cek gaji untuk karyawan", 'C');
+INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(5,"Membantu orang dengan masalah yang terkait keluarga",'S'); 
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (2, "Memeriksa dan menghitung stok barang menggunakan komputer genggam", 'C');
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (3, "Menggunakan program komputer untuk membuat tagihan pelanggan", 'C');
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (1, "Menjual waralaba restoran ke orang yang tertarik", 'E');
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (4, "Menyimpan dan mengatur data karyawan dengan rapi", 'C');
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (2, "Menjual produk di toko untuk pelanggan", 'E');
 
-INSERT INTO statements(statement_id, statement_content, statement_category) 
-VALUES (5, "Menghitung dan mencatat data angka atau statistik dengan akurat", 'C');
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (3, "Mengelola semua kegiatan di hotel", 'E');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (4, "Menjalankan salon atau tempat potong rambut", 'E');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (5, "Mengatur dan memimpin bagian dalam perusahaan besar", 'E');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (1, "Membuat dan membagikan cek gaji untuk karyawan", 'C');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (2, "Memeriksa dan menghitung stok barang menggunakan komputer genggam", 'C');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (3, "Menggunakan program komputer untuk membuat tagihan pelanggan", 'C');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (4, "Menyimpan dan mengatur data karyawan dengan rapi", 'C');
+
+INSERT INTO statements(statement_id, statement_content, statement_category) VALUES (5, "Menghitung dan mencatat data angka atau statistik dengan akurat", 'C');
