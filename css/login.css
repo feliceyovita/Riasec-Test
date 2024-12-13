@@ -63,7 +63,7 @@ body {
 }
 
 .login-box button:hover {
-    background-color: #c9302c;
+    background-color: rgb(68, 142, 58);
 }
 
 .options-box {
