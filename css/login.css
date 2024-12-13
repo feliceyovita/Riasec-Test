@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f5f0;
+    background-color: #faf5ff;
     color: #5a5a5a;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .login-box {
-    border: 1px solid #d9534f;
+    border: 1px solid #e7d3fa;
     padding: 20px;
     margin-top: 20px;
     display: inline-block;
@@ -27,7 +27,7 @@ body {
 .login-box h2 {
     margin-top: 0;
     font-size: 1.5em;
-    color: #d9534f;
+    color: #5a5a5a;
     text-align: center;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .login-box button {
-    background-color: #d9534f;
+    background-color: rgb(91, 191, 78);
     color: #fff;
     border: none;
     padding: 12px 20px;
