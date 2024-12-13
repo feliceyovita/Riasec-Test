@@ -1,5 +1,9 @@
 <?php include 'includes/header.php'; ?>
 <section class="section">
+  <div class="account__container">
+          <a href="login.php" class="akun">Masuk</a>
+          <a href="register.php" class="akun">Daftar</a>
+  </div>
   <div class="section__container">
     <div class="content">
       <p class="subtitle">HALO</p>
