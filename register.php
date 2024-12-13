@@ -1,3 +1,41 @@
+<?php
+session_start();
+
+// Koneksi ke database
+$conn = new mysqli("localhost", "root", "", "riasec_test");
+
+if ($conn->connect_error) {
+    die("Koneksi database gagal: " . $conn->connect_error);
+}
+
+// Proses form register
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $conn->real_escape_string($_POST['name']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm-password'];
+
+    // Validasi password dan konfirmasi password
+    if ($password !== $confirm_password) {
+        echo "<script>alert('Kata sandi dan konfirmasi kata sandi tidak cocok!');</script>";
+    } else {
+        // Enkripsi password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Simpan data ke database
+        $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "<script>alert('Pendaftaran berhasil! Silakan login.'); window.location.href='login.php';</script>";
+        } else {
+            echo "<script>alert('Terjadi kesalahan: " . $conn->error . "');</script>";
+        }
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -13,7 +51,7 @@
         <p>Buat akun baru untuk mulai menggunakan RIASEC Test!</p>
         <div class="login-box">
             <h2>Daftar Akun</h2>
-            <form action="#" method="POST">
+            <form action="register.php" method="POST">
                 <label for="name">
                     <i class="fas fa-user"></i> Nama Lengkap
                 </label>
@@ -38,7 +76,7 @@
             </form>
         </div>
         <div class="options-box">
-            <button onclick="window.location.href='login.html'">Sudah punya akun?</button>
+            <button onclick="window.location.href='login.php'">Sudah punya akun?</button>
             <button onclick="window.location.href='index.php'">Kembali ke Home</button>
         </div>
     </div>
