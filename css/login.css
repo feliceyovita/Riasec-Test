@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f0;
+    color: #5a5a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.login-box {
+    border: 1px solid #d9534f;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #d9534f;
+    text-align: center;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.login-box button:hover {
+    background-color: #c9302c;
+}
+
+.options-box {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.options-box button {
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.options-box button:hover {
+    background-color: #31b0d5;
+}
