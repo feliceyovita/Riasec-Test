@@ -1,5 +1,9 @@
 USE riasec_test;
 
+-- Membuat user untuk aplikasi
+CREATE USER 'riasec_user'@'localhost' IDENTIFIED BY 'secure_password';
+
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -24,6 +28,12 @@ CREATE TABLE personality_test_scores(
 	conventional float(5,2),
 	result varchar(5) not null
 );
+
+-- Memberikan hak akses semua tabel dalam database `riasec_test` ke user
+GRANT ALL PRIVILEGES ON riasec_test.* TO 'riasec_user'@'localhost';
+
+-- Atau berikan akses terbatas hanya untuk SELECT, INSERT, dan UPDATE
+GRANT SELECT, INSERT, UPDATE ON riasec_test.* TO 'riasec_user'@'localhost';
 
 
 INSERT INTO statements(statement_id ,statement_content ,statement_category)VALUES(1,"Mengadakan paduan suara musikal",'A'); 
