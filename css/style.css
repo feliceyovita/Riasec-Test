@@ -39,7 +39,7 @@ body {
 }
 
 .section__container {
-    min-height: 100vh;
+    max-height: 100vh;
     max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
@@ -67,6 +67,8 @@ body {
     font-weight: 400;
     line-height: 3rem;
     color: var(--text-dark);
+    margin-top:0px;
+    margin-bottom: -20px;
 }
 
 .title span {
@@ -84,10 +86,10 @@ body {
 .account__container {
     margin-top: 15px;
     margin-right: 15px;
-    display: flex; /* Mengatur elemen di dalamnya agar berjajar */
-    gap: 10px; /* Jarak antara tombol */
-    justify-content: flex-end; /* Menempatkan elemen di kanan */
-    margin-bottom: 20px; /* Memberi ruang di bawah tombol (opsional) */
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; 
+    margin-bottom: 20px; 
 }
 
 .akun {
@@ -109,8 +111,6 @@ body {
     background-color: #b388e4;
     color: white;
 }
-
-
 
 .mulai__test {
     display: inline-block;
@@ -453,4 +453,35 @@ input[type="submit"]:hover {
 }
 .category img.selected {
     opacity: 1;
+}
+.logo__container {
+    position: absolute;
+    top: -10px;
+    /* Atur posisi vertikal */
+    left: 10px;
+    /* Atur posisi horizontal */
+    display: flex;
+    flex-direction: row;
+    /* Pastikan elemen dalam baris */
+    align-items: center;
+    /* Sejajarkan elemen secara vertikal */
+    gap: 5px;
+    /* Tambahkan jarak antar elemen jika diperlukan */
+}
+
+.logo {
+    width: 100px;
+    /* Ukuran logo */
+    height: auto;
+}
+
+.logo__text {
+    font-size: 1.5rem;
+    /* Ukuran teks */
+    font-weight: bold;
+    color: #333;
+    /* Warna teks */
+    line-height: 1;
+    /* Pastikan line-height tidak terlalu besar */
+    margin-top: 0px;
 }

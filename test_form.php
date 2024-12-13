@@ -10,6 +10,11 @@ if (!isset($_SESSION['user_id'])) {
 include 'includes/header.php';
 ?>
 
+<div class="logo__container">
+    <img src="assets/riasec.png" alt="Logo Riasec" class="logo" />
+    <span class="logo__text">Tes Riasec</span>
+</div>
+
 <div class="main" style="margin-top: 100px;">
     <h1 class="header">Isi formulir berikut</h1>
 

@@ -6,6 +6,12 @@ session_start(); // Memulai sesi untuk memeriksa status login
 $is_logged_in = isset($_SESSION['user_id']);
 ?>
 <section class="section">
+  <!-- Menambahkan logo di sudut kiri atas -->
+  <div class="logo__container">
+      <img src="assets/riasec.png" alt="Logo Riasec" class="logo" />
+      <span class="logo__text">Tes Riasec</span>
+  </div>
+
   <div class="account__container">
     <?php if ($is_logged_in): ?>
       <!-- Tombol keluar jika sudah login -->
@@ -16,6 +22,7 @@ $is_logged_in = isset($_SESSION['user_id']);
       <a href="register.php" class="akun">Daftar</a>
     <?php endif; ?>
   </div>
+
   <div class="section__container">
     <div class="content">
       <p class="subtitle">HALO</p>
