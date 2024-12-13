@@ -1,4 +1,10 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+include 'includes/header.php'; 
+session_start(); // Memulai sesi untuk memeriksa status login
+
+// Cek apakah pengguna sudah login
+$is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'];
+?>
 <section class="section">
   <div class="account__container">
           <a href="login.php" class="akun">Masuk</a>
@@ -18,9 +24,15 @@
         Tes ini terdiri dari 30 tugas yang harus Anda nilai berdasarkan seberapa Anda menikmati melakukannya, dengan skala: (1)
         tidak suka, (2) agak tidak suka, (3) netral, (4) agak suka, (5) suka. Tes ini membutuhkan waktu sekitar 5-10 menit.
       </p>
-	<div class="action__btns">
-		<a href="test_form.php" class="mulai__test">Mulai tes</a>
-	</div>
+      <div class="action__btns">
+        <?php if ($is_logged_in): ?>
+          <!-- Jika sudah login, arahkan ke halaman tes -->
+          <a href="test_form.php" class="mulai__test">Mulai tes</a>
+        <?php else: ?>
+          <!-- Jika belum login, arahkan ke halaman login -->
+          <a href="login.php" class="mulai__test">Mulai tes</a>
+        <?php endif; ?>
+      </div>
     </div>
     <div class="image">
       <img src="assets/profile.png" alt="profile" />
