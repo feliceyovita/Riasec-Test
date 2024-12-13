@@ -3,12 +3,18 @@ include 'includes/header.php';
 session_start(); // Memulai sesi untuk memeriksa status login
 
 // Cek apakah pengguna sudah login
-$is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'];
+$is_logged_in = isset($_SESSION['user_id']);
 ?>
 <section class="section">
   <div class="account__container">
-          <a href="login.php" class="akun">Masuk</a>
-          <a href="register.php" class="akun">Daftar</a>
+    <?php if ($is_logged_in): ?>
+      <!-- Tombol keluar jika sudah login -->
+      <a href="logout.php" class="akun">Keluar</a>
+    <?php else: ?>
+      <!-- Tombol masuk dan daftar jika belum login -->
+      <a href="login.php" class="akun">Masuk</a>
+      <a href="register.php" class="akun">Daftar</a>
+    <?php endif; ?>
   </div>
   <div class="section__container">
     <div class="content">
@@ -26,7 +32,7 @@ $is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'];
       </p>
       <div class="action__btns">
         <?php if ($is_logged_in): ?>
-          <!-- Jika sudah login, arahkan ke halaman tes -->
+          <!-- Jika login, arahkan ke halaman tes -->
           <a href="test_form.php" class="mulai__test">Mulai tes</a>
         <?php else: ?>
           <!-- Jika belum login, arahkan ke halaman login -->

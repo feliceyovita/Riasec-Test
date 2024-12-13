@@ -1,4 +1,14 @@
-<?php include 'includes/header.php'; ?>
+<?php
+session_start(); // Memulai sesi untuk memeriksa status login
+
+// Jika pengguna belum login, arahkan mereka ke halaman login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+include 'includes/header.php';
+?>
 
 <div class="main" style="margin-top: 100px;">
     <h1 class="header">Isi formulir berikut</h1>
@@ -110,4 +120,3 @@
 </script>
 
 <?php include 'includes/footer.php'; ?>
-    
