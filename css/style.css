@@ -210,22 +210,39 @@ body {
     pointer-events: auto;
 }
 
-.form-header {
+/* header, a {
+    position: relative;
+    z-index: 1001; 
+} */
+
+
+/* Hanya berlaku pada header formulir */
+form .header {
     position: fixed;
-    top: 13px; /* Tetap di atas halaman */
+    top: 13px; 
     left: 0;
-    width: 100%; /* Lebar penuh halaman */
+    width: 100%; 
     text-align: center;
-    z-index: 1001; /* Pastikan elemen berada di atas elemen lainnya */
+    z-index: 1001; 
 }
 
-a {
+
+/* .form-header {
     position: fixed;
-    top: 60px; /* Tepat di bawah header (ganti 50px dengan tinggi header sebenarnya) */
+    top: 13px; 
     left: 0;
-    width: 100%; /* Lebar penuh halaman */
+    width: 100%; 
     text-align: center;
-    z-index: 1000; /* Pastikan urutannya di bawah header */
+    z-index: 1001; 
+} */
+
+.home {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    width: 100%; 
+    text-align: center;
+    z-index: 1000; 
 }
 
 /* Tombol Tutup Modal */

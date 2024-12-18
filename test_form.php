@@ -16,7 +16,9 @@ include 'includes/header.php';
 </div>
 
 <div class="main" style="margin-top: 100px;">
-    <h1 class="form-header">Isi formulir berikut</h1>
+    <form>
+        <h1 class="header">Isi formulir berikut</h1>
+    </form>
 
     <?php if (isset($_GET['message']) && $_GET['message'] == 'T') { ?>
         <p class="message">
@@ -24,7 +26,7 @@ include 'includes/header.php';
         </p>
     <?php } ?>
 
-    <a href="index.php">Home</a>
+    <div class="home"><a href="index.php">Home</a></div>
 
     <form action="result.php" method="post" id="testForm">
         <div id="questionModal" class="modal">
