@@ -24,7 +24,7 @@ include 'includes/header.php';
         </p>
     <?php } ?>
 
-    <a href="index.php">Home</a>
+    <div class="home"><a href="index.php">Home</a></div>
 
     <form action="result.php" method="post" id="testForm">
         <div id="questionModal" class="modal">
