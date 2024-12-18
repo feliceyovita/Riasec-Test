@@ -219,7 +219,7 @@ body {
     z-index: 1001; /* Pastikan elemen berada di atas elemen lainnya */
 }
 
-a {
+.home {
     position: fixed;
     top: 60px; /* Tepat di bawah header (ganti 50px dengan tinggi header sebenarnya) */
     left: 0;
