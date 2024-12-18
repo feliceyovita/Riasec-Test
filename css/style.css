@@ -177,26 +177,30 @@ body {
 }
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 1000; 
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%; /* Pastikan modal mengisi layar secara penuh */
     justify-content: center;
     align-items: center;
-    margin-top: 220px;
 }
 
+/* Konten modal */
 .modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 60%; 
-    max-width: 800px;
+    width: 100%; /* Tetapkan lebar modal */
+    max-width: 800px; /* Batas lebar maksimal */
+    min-width: 400px; /* Menetapkan lebar minimum agar modal tidak terlalu sempit */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto; /* Pastikan konten tidak keluar dari modal jika terlalu panjang */
 }
+
 
 #questionModal {
     pointer-events: auto;
@@ -206,9 +210,22 @@ body {
     pointer-events: auto;
 }
 
-header, a {
-    position: relative;
-    z-index: 1001; 
+.form-header {
+    position: fixed;
+    top: 13px; /* Tetap di atas halaman */
+    left: 0;
+    width: 100%; /* Lebar penuh halaman */
+    text-align: center;
+    z-index: 1001; /* Pastikan elemen berada di atas elemen lainnya */
+}
+
+a {
+    position: fixed;
+    top: 60px; /* Tepat di bawah header (ganti 50px dengan tinggi header sebenarnya) */
+    left: 0;
+    width: 100%; /* Lebar penuh halaman */
+    text-align: center;
+    z-index: 1000; /* Pastikan urutannya di bawah header */
 }
 
 /* Tombol Tutup Modal */
