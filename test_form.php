@@ -18,12 +18,6 @@ include 'includes/header.php';
 <div class="main" style="margin-top: 100px;">
     <h1 class="form-header">Isi formulir berikut</h1>
 
-    <?php if (isset($_GET['message']) && $_GET['message'] == 'T') { ?>
-        <p class="message">
-            Anda perlu mengisi setidaknya 5-6 pernyataan untuk mendapatkan hasil.
-        </p>
-    <?php } ?>
-
     <div class="home"><a href="index.php">Home</a></div>
 
     <form action="result.php" method="post" id="testForm">
