@@ -4,33 +4,62 @@ $scorePercentageList= array('R'=>'0','I'=>'0','A'=>'0','S'=>'0','E'=>'0','C'=>'0
 $result_personality="";
 
 /* for RIASEC test result*/
-function getPersonalityTestResults(){
-	global $scoreList,$result_personality; array('R'=>'0','I'=>'0','A'=>'0','S'=>'0','E'=>'0','C'=>'0');
-	if(isset($_POST['submit']) && count($_POST) >= 7){
-		if(count($_POST) <= 15){
-			echo "<script> alert('To get good results atleast fill 15 statements'); </script>";
-		}
-		calculateScoreByCategory('R');
-		calculateScoreByCategory('I');
-		calculateScoreByCategory('A');
-		calculateScoreByCategory('S');
-		calculateScoreByCategory('E');
-		calculateScoreByCategory('C');
-		arsort($scoreList);
-		calculateScoreInPercentage($scoreList);
-		$iterator=0;
-		foreach($scoreList as $key => $value){
-			$result_personality.=$key;
-			$iterator++;
-			if($iterator==3) break;
-		}
-		if(isset($_POST['can_save_data']) && $_POST['can_save_data']==true){
-			insertTestResults($result_personality);
-		}
-	} else{
-		header("Location: test_form.php?message=T");
-	}
- 
+function getPersonalityTestResults() {
+    global $scoreList, $result_personality;
+
+    if (isset($_POST['submit'])) {
+        // Hitung jumlah pertanyaan yang diisi
+        $answeredQuestions = array_filter($_POST, function($value, $key) {
+            return strpos($key, 'R') === 0 || strpos($key, 'I') === 0 || 
+                   strpos($key, 'A') === 0 || strpos($key, 'S') === 0 || 
+                   strpos($key, 'E') === 0 || strpos($key, 'C') === 0;
+        }, ARRAY_FILTER_USE_BOTH);
+
+        $answeredCount = count($answeredQuestions);
+
+        // Minimal 7 pertanyaan harus diisi
+        if ($answeredCount < 7) {
+            // Gunakan JavaScript untuk pesan di halaman test_form
+            echo "<script>
+                alert('Jawab minimal 7 pertanyaan untuk mendapatkan hasil.');
+                window.location.href = 'test_form.php';
+            </script>";
+            exit;
+        }
+
+        // Peringatan jika kurang dari 15
+        if ($answeredCount <= 15) {
+            echo "<script> alert('To get good results, at least fill 15 statements.'); </script>";
+        }
+
+        // Proses hasil
+        calculateScoreByCategory('R');
+        calculateScoreByCategory('I');
+        calculateScoreByCategory('A');
+        calculateScoreByCategory('S');
+        calculateScoreByCategory('E');
+        calculateScoreByCategory('C');
+
+        arsort($scoreList);
+        calculateScoreInPercentage($scoreList);
+
+        $iterator = 0;
+        foreach ($scoreList as $key => $value) {
+            $result_personality .= $key;
+            $iterator++;
+            if ($iterator == 3) break;
+        }
+
+        if (isset($_POST['can_save_data']) && $_POST['can_save_data'] == true) {
+            insertTestResults($result_personality);
+        }
+    } else {
+        echo "<script>
+            alert('Something went wrong.');
+            window.location.href = 'test_form.php';
+        </script>";
+        exit;
+    }
 }
 
 

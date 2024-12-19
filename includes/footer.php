@@ -17,7 +17,7 @@ window.onload = function () {
 				{ label: "Investigative",
 				y: <?php echo $scorePercentageList['I']?>  },
 				
-				{ label: "Artistic",
+				{ label: "Artistic",	
 				y: <?php echo $scorePercentageList['A']?>  },
 
 				{ label: "Social", 
