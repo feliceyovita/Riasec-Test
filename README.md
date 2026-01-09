@@ -29,30 +29,30 @@ Aplikasi ini memungkinkan pengguna untuk:
 - **phpMyAdmin**
 
 ---
-
 ## 📁 Struktur Folder
+
+```
 Riasec-Test/
+├── assets/                # Asset pendukung (gambar)
+├── css/                   # File CSS
+│   ├── login.css
+│   └── style.css
 │
-├── assets/ # Asset pendukung (gambar)
-├── css/ # File CSS
-│ ├── login.css
-│ ├── style.css
-│
-├── includes/ # File PHP pendukung
-│ ├── db.php 
-│ ├── header.php 
-│ └── footer.php 
+├── includes/              # File PHP pendukung
+│   ├── db.php
+│   ├── header.php
+│   └── footer.php
 │
 ├── db.sql
-├── index.php 
-├── login.php 
+├── index.php
+├── login.php
 ├── logout.php
-├── register.php 
-├── test_form.php 
-├── result.php 
-├── result.js 
-└── util_functions.php 
-
+├── register.php
+├── test_form.php
+├── result.php
+├── result.js
+└── util_functions.php
+```
 ---
 
 ## ⚙️ Cara Menjalankan Aplikasi
